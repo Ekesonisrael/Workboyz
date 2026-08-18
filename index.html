@@ -1,0 +1,1874 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WORK BOYZ | Hustle Streetwear</title>
+  <meta name="description" content="Premium Hustle Streetwear brand based in Abuja/Mararaba. Shop caps, tracksuits, armless tanks, and urban apparel." />
+  <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/1Wr727CBSsBFkDbQRVNR5wodIgBXrG8oQ" />
+
+  <!-- Open Graph / WhatsApp / Facebook Preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="WORK BOYZ | Hustle Streetwear" />
+  <meta property="og:description" content="Premium Hustle Streetwear brand based in Abuja/Mararaba. Shop caps, tracksuits, armless tanks, and urban apparel." />
+  <meta property="og:image" content="https://lh3.googleusercontent.com/d/1lcrRlK-prF13_GUW6rm9pZQm6ALkyE-Y" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="WORK BOYZ" />
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="WORK BOYZ | Hustle Streetwear" />
+  <meta name="twitter:description" content="Premium Hustle Streetwear brand based in Abuja/Mararaba. Shop caps, tracksuits, armless tanks, and urban apparel." />
+  <meta name="twitter:image" content="https://lh3.googleusercontent.com/d/1lcrRlK-prF13_GUW6rm9pZQm6ALkyE-Y" />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:ital,wght@0,700;0,800;1,800;1,900&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#050505',
+              dark: '#0b0b0d',
+              card: '#111114',
+              border: 'rgba(255, 255, 255, 0.1)',
+              borderHover: 'rgba(255, 255, 255, 0.3)',
+              lime: '#ccff00',
+              orange: '#ff3300',
+              silver: '#e5e5e5',
+              gray: '#888888'
+            }
+          },
+          fontFamily: {
+            bebas: ['"Bebas Neue"', 'sans-serif'],
+            syne: ['"Syne"', 'sans-serif'],
+            space: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Preloader Animation */
+    @keyframes preloaderProgress {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+    .animate-progress {
+      animation: preloaderProgress 1.2s ease-in-out infinite;
+    }
+
+    /* Custom Scrollbar & Utility Styles */
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #050505;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 2px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    body {
+      background-color: #050505;
+      color: #f5f5f5;
+      font-family: 'Space Grotesk', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Ticker Marquee Animation */
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: 200%;
+      animation: marquee 22s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+
+    /* Carousel Slide Transitions */
+    .hero-slide {
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+      transform: scale(1.03);
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+    .hero-slide.active {
+      opacity: 1;
+      transform: scale(1);
+      pointer-events: auto;
+      z-index: 10;
+    }
+
+    /* Button Glows & Sophisticated Dark Hover Effects */
+    .btn-brutal {
+      position: relative;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+    }
+    .btn-brutal:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15);
+    }
+    .btn-whatsapp {
+      background-color: #16a34a;
+      color: #ffffff;
+      transition: all 0.25s ease;
+    }
+    .btn-whatsapp:hover {
+      background-color: #22c55e;
+      box-shadow: 0 0 20px rgba(34, 197, 94, 0.35);
+      transform: translateY(-2px);
+    }
+
+    /* Product Card Image Zoom */
+    .card-img-wrap img {
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+    }
+    .card-img-wrap:hover img {
+      transform: scale(1.06);
+    }
+
+    /* Modal Backdrop Blur */
+    .modal-backdrop {
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    /* Pulse Glow */
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.1); }
+      50% { box-shadow: 0 0 28px rgba(255, 255, 255, 0.3); }
+    }
+    .pulse-glow {
+      animation: pulseGlow 2.5s infinite;
+    }
+
+    /* Hero Slider Image Position Alignment */
+    .hero-slide img,
+    #heroSlider img,
+    .hero-slider img {
+      object-fit: cover !important;
+      object-position: center 10% !important;
+    }
+
+    /* Desktop Image Display Fix */
+    @media (min-width: 1024px) {
+      .card-img-wrap img,
+      .product-card img {
+        object-fit: cover !important;
+        object-position: center top !important;
+      }
+      .hero-slide img,
+      #heroSlider img,
+      .hero-slider img {
+        object-fit: cover !important;
+        object-position: center 8% !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-[#050505] text-slate-100 min-h-screen flex flex-col selection:bg-white selection:text-black">
+
+  <!-- ================= INITIAL PAGE PRELOADER ================= -->
+  <div id="preloader" class="fixed inset-0 z-[9999] bg-[#050505] flex flex-col items-center justify-center transition-opacity duration-500">
+    <div class="flex flex-col items-center gap-6">
+      <div class="relative flex items-center justify-center">
+        <!-- Glow Aura -->
+        <div class="absolute -inset-6 rounded-full bg-white/10 blur-2xl animate-pulse"></div>
+        <!-- High-Impact Brand Emblem -->
+        <div class="relative px-8 py-6 bg-black/90 border border-white/20 rounded-2xl flex items-center justify-center shadow-[0_0_40px_rgba(255,255,255,0.15)] animate-pulse">
+          <img src="https://lh3.googleusercontent.com/d/1X9OvFrcLoKLCvbdeos6vgVY9bSjwCyh5" alt="WORK BOYZ Logo" class="h-14 sm:h-16 w-auto object-contain filter drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]" />
+        </div>
+      </div>
+      <div class="flex flex-col items-center gap-2 text-center">
+        <span class="font-bebas text-3xl sm:text-4xl tracking-[0.3em] text-white italic">WORK BOYZ</span>
+        <span class="text-[9px] font-bold text-white/50 tracking-[0.35em] uppercase animate-pulse">CURATING HUSTLE COLLECTION...</span>
+        <div class="w-48 h-[2px] bg-white/15 overflow-hidden relative mt-1 rounded-full">
+          <div class="absolute inset-y-0 left-0 w-full bg-white animate-progress"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= ANNOUNCEMENT TICKER ================= -->
+  <div class="bg-black text-white py-2.5 overflow-hidden text-[10px] font-medium tracking-[0.2em] uppercase border-b border-white/10 z-50 relative">
+    <div class="animate-marquee whitespace-nowrap">
+      <span class="mx-8 text-white/80"><span class="text-white font-bold">⚡ FREE EXPRESS NATIONWIDE SHIPPING</span> ON ORDERS OVER ₦250,000</span>
+      <span class="mx-8 text-white/80"><span class="text-white font-bold">🔥 WORK BOYZ 'IN THE WILD' DROP 04</span> LIVE NOW</span>
+      <span class="mx-8 text-white/80"><span class="text-white font-bold">📍 EXCLUSIVE POP-UP DROPS</span> COMING SOON</span>
+      <span class="mx-8 text-white/80"><span class="text-white font-bold">💬 DIRECT INSTANT WHATSAPP ORDERS</span> AVAILABLE 24/7</span>
+      <span class="mx-8 text-white/80"><span class="text-white font-bold">⚡ FREE EXPRESS NATIONWIDE SHIPPING</span> ON ORDERS OVER ₦250,000</span>
+      <span class="mx-8 text-white/80"><span class="text-white font-bold">🔥 WORK BOYZ 'IN THE WILD' DROP 04</span> LIVE NOW</span>
+      <span class="mx-8 text-white/80"><span class="text-white font-bold">📍 EXCLUSIVE POP-UP DROPS</span> COMING SOON</span>
+      <span class="mx-8 text-white/80"><span class="text-white font-bold">💬 DIRECT INSTANT WHATSAPP ORDERS</span> AVAILABLE 24/7</span>
+    </div>
+  </div>
+
+  <!-- ================= NAVIGATION BAR ================= -->
+  <!-- STRICT REQUIREMENT: NO SIGN UP OR LOGIN BUTTONS ANYWHERE -->
+  <header class="sticky top-0 z-40 bg-[#050505]/95 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuBtn" class="md:hidden p-2 text-white/70 hover:text-white focus:outline-none" aria-label="Toggle Navigation">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <img src="https://lh3.googleusercontent.com/d/1X9OvFrcLoKLCvbdeos6vgVY9bSjwCyh5" alt="WORK BOYZ Logo" style="height: 40px; width: auto; object-fit: contain;" />
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center space-x-8 text-[11px] font-medium tracking-[0.2em] uppercase">
+        <button onclick="filterCategory('ALL')" class="nav-cat-link active text-white hover:text-white/60 transition-colors py-1 border-b border-white" data-cat="ALL">ALL</button>
+        <button onclick="filterCategory('CAPS')" class="nav-cat-link text-white/60 hover:text-white transition-colors py-1 border-b border-transparent" data-cat="CAPS">CAPS</button>
+        <button onclick="filterCategory('SINGLETS')" class="nav-cat-link text-white/60 hover:text-white transition-colors py-1 border-b border-transparent" data-cat="SINGLETS">SINGLETS</button>
+        <button onclick="filterCategory('ARMLESS')" class="nav-cat-link text-white/60 hover:text-white transition-colors py-1 border-b border-transparent" data-cat="ARMLESS">ARMLESS</button>
+        <button onclick="filterCategory('BOTTOMS')" class="nav-cat-link text-white/60 hover:text-white transition-colors py-1 border-b border-transparent" data-cat="BOTTOMS">BOTTOMS</button>
+        <button onclick="filterCategory('TRACKSUITS')" class="nav-cat-link text-white/60 hover:text-white transition-colors py-1 border-b border-transparent" data-cat="TRACKSUITS">TRACKSUITS</button>
+        <button onclick="filterCategory('T-SHIRTS')" class="nav-cat-link text-white/60 hover:text-white transition-colors py-1 border-b border-transparent" data-cat="T-SHIRTS">T-SHIRTS</button>
+        <a href="#lookbook" class="text-white/60 hover:text-white transition-colors py-1">LOOKBOOK</a>
+      </nav>
+
+      <!-- Header Actions (Search & Cart Drawer) -->
+      <div class="flex items-center space-x-5">
+        <!-- Search Trigger -->
+        <button id="searchOpenBtn" class="p-2 text-white/70 hover:text-white transition-colors relative" aria-label="Search Catalog">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+        </button>
+
+        <!-- Wishlist Icon -->
+        <button id="wishlistDrawerBtn" onclick="toggleWishlistModal()" class="p-2 text-white/70 hover:text-white transition-colors relative" aria-label="View Wishlist">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+          </svg>
+          <span id="wishlistBadge" class="hidden absolute -top-1 -right-1 bg-red-600 text-white text-[9px] font-bold rounded-full h-4 min-w-[16px] px-1 flex items-center justify-center">0</span>
+        </button>
+
+        <!-- Cart Drawer Button -->
+        <button id="cartDrawerBtn" onclick="toggleCartDrawer()" class="p-2 text-black bg-white hover:bg-slate-200 font-bold rounded-none flex items-center gap-2 px-3.5 py-2 text-[11px] tracking-[0.15em] uppercase transition-all active:scale-95" aria-label="Open Shopping Bag">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+          </svg>
+          <span class="hidden sm:inline font-syne font-bold">BAG</span>
+          <span id="cartCountBadge" class="bg-black text-white text-[10px] font-extrabold rounded-full px-2 py-0.5 ml-0.5">0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden bg-[#0b0b0d] border-b border-white/10 px-6 py-6 space-y-4">
+      <div class="flex flex-col space-y-3 font-bebas text-xl tracking-wider">
+        <button onclick="filterCategory('ALL'); toggleMobileMenu()" class="text-left text-white py-1">ALL COLLECTION</button>
+        <button onclick="filterCategory('CAPS'); toggleMobileMenu()" class="text-left text-white/60 hover:text-white py-1">CAPS</button>
+        <button onclick="filterCategory('SINGLETS'); toggleMobileMenu()" class="text-left text-white/60 hover:text-white py-1">SINGLETS</button>
+        <button onclick="filterCategory('ARMLESS'); toggleMobileMenu()" class="text-left text-white/60 hover:text-white py-1">ARMLESS TANKS</button>
+        <button onclick="filterCategory('BOTTOMS'); toggleMobileMenu()" class="text-left text-white/60 hover:text-white py-1">BOTTOMS (SHORTS & TROUSERS)</button>
+        <button onclick="filterCategory('TRACKSUITS'); toggleMobileMenu()" class="text-left text-white/60 hover:text-white py-1">TRACKSUITS</button>
+        <button onclick="filterCategory('T-SHIRTS'); toggleMobileMenu()" class="text-left text-white/60 hover:text-white py-1">T-SHIRTS</button>
+        <a href="#lookbook" onclick="toggleMobileMenu()" class="text-white/60 hover:text-white py-1">LOOKBOOK / EDITORIAL</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= SEARCH OVERLAY ================= -->
+  <div id="searchOverlay" class="hidden fixed inset-0 z-50 bg-black/95 backdrop-blur-xl p-4 sm:p-8 flex flex-col justify-start">
+    <div class="max-w-3xl w-auto mx-auto w-full pt-16">
+      <div class="flex items-center justify-between border-b border-white/20 pb-4 mb-6">
+        <input type="text" id="searchInput" placeholder="SEARCH CAPS, SINGLETS, TEES, CARGOS..." class="bg-transparent text-2xl sm:text-4xl font-bebas italic tracking-wider text-white placeholder-white/30 focus:outline-none w-full uppercase" />
+        <button id="searchCloseBtn" class="text-white/40 hover:text-white p-2" aria-label="Close Search">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="flex items-center gap-3 text-[11px] font-medium text-white/40 uppercase tracking-[0.2em] mb-4">
+        <span>POPULAR SEARCHES:</span>
+        <button onclick="quickSearch('Heavyweight')" class="hover:text-white underline">Heavyweight</button>
+        <span>•</span>
+        <button onclick="quickSearch('Cargo')" class="hover:text-white underline">Cargo</button>
+        <span>•</span>
+        <button onclick="quickSearch('Trucker')" class="hover:text-white underline">Trucker Cap</button>
+        <span>•</span>
+        <button onclick="quickSearch('Singlet')" class="hover:text-white underline">Singlet</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="flex-grow">
+
+    <!-- ================= HERO SLIDER (7 LOOKBOOK SHOTS) ================= -->
+    <section class="relative w-full h-[75vh] sm:h-[88vh] bg-black overflow-hidden group border-b border-white/10">
+      
+      <!-- Slider Container -->
+      <div id="heroSlider" class="relative w-full h-full">
+        <!-- 7 Slides populated via JS -->
+      </div>
+
+      <!-- Slide Controls (Arrows) -->
+      <button id="heroPrevBtn" class="absolute left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 bg-black/70 hover:bg-white hover:text-black text-white border border-white/20 flex items-center justify-center transition-all backdrop-blur-md" aria-label="Previous Slide">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+      </button>
+      <button id="heroNextBtn" class="absolute right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 bg-black/70 hover:bg-white hover:text-black text-white border border-white/20 flex items-center justify-center transition-all backdrop-blur-md" aria-label="Next Slide">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </button>
+
+      <!-- Pagination Bars -->
+      <div class="absolute bottom-8 right-8 sm:right-12 z-20 hidden sm:flex items-center gap-3">
+        <div id="heroDots" class="flex items-center space-x-3">
+          <!-- Bars rendered dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BRAND MANIFESTO BANNER ================= -->
+    <section class="border-b border-white/10 bg-[#08080a] py-14 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+        <div>
+          <span class="text-[10px] uppercase tracking-[0.4em] mb-2 text-white/50 font-medium block">ARCHIVE CULTURE</span>
+          <h2 class="font-black text-4xl sm:text-5xl lg:text-6xl text-white tracking-tighter leading-[0.95] italic">
+            BUILT FOR THE HUSTLE • WORN WORLDWIDE
+          </h2>
+          <p class="text-white/60 text-xs sm:text-sm max-w-xl mt-3 leading-relaxed">
+            WORK BOYZ is a luxury streetwear house blending raw hustle energy with contemporary heavy silhouettes, industrial trims, and precision tailoring.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MAIN CATALOG SECTION ================= -->
+    <section id="catalogSection" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      
+      <!-- Catalog Header & Controls -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b border-white/10">
+        <div>
+          <span class="text-[10px] uppercase tracking-[0.4em] text-white/50 font-medium block mb-2">EXCLUSIVE INVENTORY</span>
+          <h2 class="font-bebas text-4xl sm:text-5xl text-white tracking-wider italic">AVAILABLE PIECES</h2>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="flex flex-wrap items-center gap-2">
+          <button onclick="filterCategory('ALL')" class="cat-pill active bg-white text-black font-bold text-[11px] uppercase px-5 py-2.5 tracking-[0.15em] transition-all" data-pill="ALL">ALL (31)</button>
+          <button onclick="filterCategory('CAPS')" class="cat-pill bg-white/5 hover:bg-white/10 text-white/70 font-bold text-[11px] uppercase px-5 py-2.5 tracking-[0.15em] border border-white/10 transition-all" data-pill="CAPS">CAPS (8)</button>
+          <button onclick="filterCategory('SINGLETS')" class="cat-pill bg-white/5 hover:bg-white/10 text-white/70 font-bold text-[11px] uppercase px-5 py-2.5 tracking-[0.15em] border border-white/10 transition-all" data-pill="SINGLETS">SINGLETS (6)</button>
+          <button onclick="filterCategory('ARMLESS')" class="cat-pill bg-white/5 hover:bg-white/10 text-white/70 font-bold text-[11px] uppercase px-5 py-2.5 tracking-[0.15em] border border-white/10 transition-all" data-pill="ARMLESS">ARMLESS (4)</button>
+          <button onclick="filterCategory('BOTTOMS')" class="cat-pill bg-white/5 hover:bg-white/10 text-white/70 font-bold text-[11px] uppercase px-5 py-2.5 tracking-[0.15em] border border-white/10 transition-all" data-pill="BOTTOMS">BOTTOMS (4)</button>
+          <button onclick="filterCategory('TRACKSUITS')" class="cat-pill bg-white/5 hover:bg-white/10 text-white/70 font-bold text-[11px] uppercase px-5 py-2.5 tracking-[0.15em] border border-white/10 transition-all" data-pill="TRACKSUITS">TRACKSUITS (2)</button>
+          <button onclick="filterCategory('T-SHIRTS')" class="cat-pill bg-white/5 hover:bg-white/10 text-white/70 font-bold text-[11px] uppercase px-5 py-2.5 tracking-[0.15em] border border-white/10 transition-all" data-pill="T-SHIRTS">TEES (7)</button>
+        </div>
+      </div>
+
+      <!-- Sorting Bar -->
+      <div class="flex items-center justify-between py-5 text-[10px] text-white/40 font-bold uppercase tracking-[0.2em]">
+        <div id="catalogCount">SHOWING ALL 24 ITEMS</div>
+        <div class="flex items-center gap-2">
+          <span>SORT BY:</span>
+          <select id="sortSelect" onchange="renderProducts()" class="bg-[#0e0e11] border border-white/10 text-white/80 px-3 py-1.5 text-[10px] focus:outline-none focus:border-white">
+            <option value="featured">FEATURED DROPS</option>
+            <option value="price-low">PRICE: LOW TO HIGH</option>
+            <option value="price-high">PRICE: HIGH TO LOW</option>
+            <option value="name">NAME (A-Z)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Product Grid -->
+      <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8 mt-4">
+        <!-- Dynamic Product Cards Populated via JS -->
+      </div>
+    </section>
+
+    <!-- ================= 'WORK BOYZ IN THE WILD' EDITORIAL LOOKBOOK ================= -->
+    <section id="lookbook" class="bg-[#08080a] py-20 border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="text-[10px] uppercase tracking-[0.4em] text-white/50 font-medium block mb-2">EDITORIAL GRID 01</span>
+          <h2 class="font-bebas text-5xl sm:text-6xl text-white tracking-widest italic">WORK BOYZ IN THE WILD</h2>
+          <p class="text-white/50 text-xs sm:text-sm mt-2">
+            Street style visuals captured across the culture. Raw fits built for the daily grind.
+          </p>
+        </div>
+
+        <!-- Lookbook Grid -->
+        <div id="lookbookGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Lookbook items dynamically rendered -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-black border-t border-white/10 text-white/50 text-xs py-14 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <img src="https://lh3.googleusercontent.com/d/1X9OvFrcLoKLCvbdeos6vgVY9bSjwCyh5" alt="WORK BOYZ Logo" style="height: 40px; width: auto; object-fit: contain;" />
+        </div>
+        <p class="text-white/40 text-xs leading-relaxed">
+          Luxury Streetwear House. Crafted with premium heavy textiles and raw street aesthetics.
+        </p>
+        <!-- Social Media Links -->
+        <div class="flex items-center gap-4 mt-4 text-white/70">
+          <a href="https://www.instagram.com/wbstreetwears" target="_blank" class="hover:text-white transition-colors text-[11px] font-bold tracking-wider flex items-center gap-1.5 uppercase">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            Instagram
+          </a>
+          <span>•</span>
+          <a href="https://www.tiktok.com/@wbstreetwears" target="_blank" class="hover:text-white transition-colors text-[11px] font-bold tracking-wider flex items-center gap-1.5 uppercase">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+            TikTok
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-white text-[11px] uppercase tracking-[0.2em] mb-4">CUSTOMER CARE</h4>
+        <ul class="space-y-2.5 text-[11px]">
+          <li><a href="https://wa.me/2348136263503?text=Hello%20WORK%20BOYZ!%20I%20have%20a%20question%20about%20orders." target="_blank" class="hover:text-white transition-colors">Instant WhatsApp Support</a></li>
+          <li><button onclick="openSizeGuideModal()" class="hover:text-white transition-colors">Size & Fit Guide</button></li>
+          <li><button onclick="alert('Shipping Details:\n- Local Abuja/Mararaba: Same-day dispatch\n- Nationwide Nigeria: 2-3 Business Days\n- Instant WhatsApp tracking provided')" class="hover:text-white transition-colors">Shipping & Delivery Info</button></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-white text-[11px] uppercase tracking-[0.2em] mb-4">FLAGSHIP STORE & LOCATION</h4>
+        <p class="text-white/40 text-xs mb-2">📍 Shop C348, Worldgate shopping center, Along Abuja-keffi expressway, Mararaba</p>
+        <p class="text-white/40 text-xs mt-2">💬 Phone & WhatsApp: +234 813 626 3503</p>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-white text-[11px] uppercase tracking-[0.2em] mb-4">DIRECT WHATSAPP ORDERING</h4>
+        <p class="text-white/40 text-xs mb-4">No registration required. Select your size, tap Order on WhatsApp, and chat directly with our sales team.</p>
+        <a href="https://wa.me/2348136263503?text=Hello%20WORK%20BOYZ!%20I'd%20like%20to%20browse%20available%20stock." target="_blank" class="inline-flex items-center gap-2 btn-whatsapp font-bold px-5 py-2.5 text-[10px] uppercase tracking-[0.2em]">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 0C5.396 0 0 5.397 0 12.031c0 2.122.553 4.195 1.607 6.02L0 24l6.102-1.6c1.761.96 3.754 1.467 5.929 1.467 6.634 0 12.03-5.397 12.03-12.036C24.061 5.397 18.665 0 12.031 0z"/></svg>
+          Chat Sales Team
+        </a>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between text-white/30 text-[10px] uppercase tracking-[0.2em] gap-4">
+      <div>© 2026 WORK BOYZ ARCHIVE. ALL RIGHTS RESERVED.</div>
+      <div class="flex items-center space-x-4">
+        <span>CURRENCY: NGN (₦)</span>
+        <span>•</span>
+        <span>NIGERIA / WORLDWIDE</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= QUICK-VIEW PRODUCT MODAL ================= -->
+  <div id="quickViewModal" class="hidden fixed inset-0 z-50 modal-backdrop bg-black/85 p-4 sm:p-6 overflow-y-auto flex items-center justify-center">
+    <div class="bg-[#0e0e11] border border-white/20 max-w-4xl w-full shadow-2xl relative overflow-hidden my-8">
+      
+      <!-- Close Modal Button -->
+      <button onclick="closeQuickViewModal()" class="absolute top-4 right-4 z-20 bg-black/80 hover:bg-white hover:text-black text-white p-2.5 transition-colors border border-white/10" aria-label="Close Modal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+
+      <div class="grid grid-cols-1 md:grid-cols-2">
+        <!-- Modal Image Section -->
+        <div class="relative bg-black h-80 sm:h-96 md:h-full flex items-center justify-center overflow-hidden">
+          <img id="qvImage" src="" alt="Product Photo" loading="lazy" class="w-full h-full object-cover" />
+          <span id="qvBadge" class="absolute top-4 left-4 bg-white text-black font-extrabold text-[9px] uppercase tracking-[0.25em] px-3 py-1">HOT DROP</span>
+        </div>
+
+        <!-- Modal Info & Purchase Controls -->
+        <div class="p-6 sm:p-10 flex flex-col justify-between">
+          <div>
+            <span id="qvCategory" class="text-white/40 font-bold text-[10px] tracking-[0.3em] uppercase block mb-1">CAPS</span>
+            <h3 id="qvTitle" class="font-bebas text-3xl sm:text-4xl text-white tracking-wide italic leading-tight">WORK BOYZ CAP</h3>
+            
+            <div class="flex items-center gap-3 my-4">
+              <span id="qvPrice" class="font-syne font-black text-2xl text-white">₦ 10,000</span>
+              <span class="text-[10px] text-emerald-400 font-bold bg-emerald-950/60 border border-emerald-800/50 px-2 py-0.5">IN STOCK - READY TO SHIP</span>
+            </div>
+
+            <p id="qvDescription" class="text-white/60 text-xs leading-relaxed my-4">
+              Crafted from ultra-heavyweight high-density cotton canvas with custom metal brand hardware and raw distressing. Designed for daily heavy rotation.
+            </p>
+
+            <!-- Size Selection -->
+            <div class="mb-6">
+              <div class="flex justify-between items-center mb-2.5">
+                <span class="text-[10px] font-bold text-white/60 uppercase tracking-[0.2em]">SELECT SIZE:</span>
+                <button onclick="openSizeGuideModal()" class="text-[10px] text-white/50 hover:text-white underline tracking-wider">Size Guide</button>
+              </div>
+              <div class="grid grid-cols-4 gap-2.5" id="qvSizeGrid">
+                <button onclick="selectSize('S')" class="qv-size-btn border border-white/10 bg-white/5 hover:border-white text-white/70 py-2.5 text-xs font-bold transition-all" data-size="S">S</button>
+                <button onclick="selectSize('M')" class="qv-size-btn active border-2 border-white bg-white/10 text-white py-2.5 text-xs font-bold transition-all" data-size="M">M</button>
+                <button onclick="selectSize('L')" class="qv-size-btn border border-white/10 bg-white/5 hover:border-white text-white/70 py-2.5 text-xs font-bold transition-all" data-size="L">L</button>
+                <button onclick="selectSize('XL')" class="qv-size-btn border border-white/10 bg-white/5 hover:border-white text-white/70 py-2.5 text-xs font-bold transition-all" data-size="XL">XL</button>
+              </div>
+            </div>
+
+            <!-- Quantity Selector -->
+            <div class="flex items-center gap-4 mb-6">
+              <span class="text-[10px] font-bold text-white/60 uppercase tracking-[0.2em]">QUANTITY:</span>
+              <div class="flex items-center border border-white/20 bg-black">
+                <button onclick="adjustQvQty(-1)" class="px-3 py-1 text-white/60 hover:text-white font-bold text-base">-</button>
+                <span id="qvQty" class="px-3 py-1 font-bold text-xs text-white">1</span>
+                <button onclick="adjustQvQty(1)" class="px-3 py-1 text-white/60 hover:text-white font-bold text-base">+</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Purchase Action Buttons -->
+          <div class="space-y-3 pt-4 border-t border-white/10">
+            <!-- PROMINENT WHATSAPP ORDER BUTTON -->
+            <a id="qvWhatsAppLink" href="#" target="_blank" class="w-full btn-whatsapp font-black py-4 px-4 flex items-center justify-center gap-2 text-xs tracking-[0.2em] uppercase shadow-lg">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 0C5.396 0 0 5.397 0 12.031c0 2.122.553 4.195 1.607 6.02L0 24l6.102-1.6c1.761.96 3.754 1.467 5.929 1.467 6.634 0 12.03-5.397 12.03-12.036C24.061 5.397 18.665 0 12.031 0z"/></svg>
+              ORDER ON WHATSAPP
+            </a>
+
+            <!-- ADD TO CART BUTTON -->
+            <button id="qvAddToCartBtn" onclick="addCurrentToCart()" class="w-full bg-white text-black hover:bg-slate-200 font-bold py-3.5 px-4 transition-all flex items-center justify-center gap-2 text-xs uppercase tracking-[0.2em]">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+              </svg>
+              ADD TO SHOPPING BAG
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= CART SLIDE-OUT DRAWER ================= -->
+  <div id="cartDrawer" onclick="if(event.target === this) toggleCartDrawer()" class="hidden fixed inset-0 z-[80] modal-backdrop bg-black/80 flex justify-end">
+    <div class="bg-[#0b0b0e] w-full max-w-md h-full flex flex-col justify-between border-l border-white/10 shadow-2xl relative" onclick="event.stopPropagation()">
+      
+      <!-- Cart Drawer Header -->
+      <div class="p-6 border-b border-white/10 flex items-center justify-between flex-shrink-0 bg-[#0b0b0e] z-10">
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+          </svg>
+          <h3 class="font-bebas text-2xl text-white tracking-widest italic">YOUR SHOPPING BAG</h3>
+        </div>
+        <button onclick="toggleCartDrawer()" class="text-white/40 hover:text-white p-1" aria-label="Close Cart">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Cart Items List (Scrollable Body) -->
+      <div id="cartItemsContainer" class="p-6 overflow-y-auto flex-grow space-y-4">
+        <!-- Cart items rendered via JS -->
+      </div>
+
+      <!-- Cart Footer / Checkout (Fixed at bottom outside scroll area) -->
+      <div class="p-6 border-t border-white/10 bg-black space-y-4 flex-shrink-0 relative z-30">
+        <div class="space-y-2">
+          <div class="flex justify-between text-xs text-white/50">
+            <span>SUBTOTAL:</span>
+            <span id="cartSubtotal" class="font-bold text-white">₦ 0</span>
+          </div>
+          <div class="flex justify-between text-xs text-white/50">
+            <span>DELIVERY (NIGERIA / WORLDWIDE):</span>
+            <span class="text-emerald-400 font-bold">CALCULATED AT CHECKOUT</span>
+          </div>
+          <div class="flex justify-between text-sm font-bold text-white pt-2 border-t border-white/10">
+            <span>TOTAL AMOUNT:</span>
+            <span id="cartTotal" class="font-syne font-black text-white text-lg">₦ 0</span>
+          </div>
+        </div>
+
+        <!-- Checkout on WhatsApp Button -->
+        <a id="cartCheckoutBtn" href="https://wa.me/2348136263503" target="_blank" rel="noopener noreferrer" onclick="handleCartCheckout(event)" class="w-full btn-whatsapp font-black py-4 px-4 flex items-center justify-center gap-2 text-xs tracking-[0.2em] uppercase shadow-lg relative z-40 cursor-pointer pointer-events-auto">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 0C5.396 0 0 5.397 0 12.031c0 2.122.553 4.195 1.607 6.02L0 24l6.102-1.6c1.761.96 3.754 1.467 5.929 1.467 6.634 0 12.03-5.397 12.03-12.036C24.061 5.397 18.665 0 12.031 0z"/></svg>
+          CHECKOUT ALL ON WHATSAPP
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= SIZE GUIDE MODAL ================= -->
+  <div id="sizeGuideModal" class="hidden fixed inset-0 z-50 modal-backdrop bg-black/85 p-4 flex items-center justify-center">
+    <div class="bg-[#0e0e11] border border-white/20 max-w-lg w-full p-6 sm:p-8 relative text-slate-200">
+      <button onclick="closeSizeGuideModal()" class="absolute top-4 right-4 text-white/40 hover:text-white" aria-label="Close Size Guide">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      <h3 class="font-bebas text-3xl text-white tracking-widest italic mb-3">WORK BOYZ SIZE GUIDE</h3>
+      <p class="text-xs text-white/50 mb-5">All WORK BOYZ garments feature a relaxed, boxy streetwear fit. For a standard fit, order true to size. For an extreme oversized look, size up.</p>
+      
+      <div class="overflow-x-auto">
+        <table class="w-full text-xs text-left border border-white/10">
+          <thead class="bg-white/5 text-white font-bold uppercase tracking-wider">
+            <tr>
+              <th class="p-2.5 border border-white/10">SIZE</th>
+              <th class="p-2.5 border border-white/10">CHEST (INCHES)</th>
+              <th class="p-2.5 border border-white/10">LENGTH (INCHES)</th>
+              <th class="p-2.5 border border-white/10">WAIST (BOTTOMS)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/10 text-white/70">
+            <tr><td class="p-2.5 font-bold text-white">S</td><td class="p-2.5">38 - 40"</td><td class="p-2.5">28"</td><td class="p-2.5">28 - 30"</td></tr>
+            <tr><td class="p-2.5 font-bold text-white">M</td><td class="p-2.5">41 - 43"</td><td class="p-2.5">29"</td><td class="p-2.5">31 - 33"</td></tr>
+            <tr><td class="p-2.5 font-bold text-white">L</td><td class="p-2.5">44 - 46"</td><td class="p-2.5">30"</td><td class="p-2.5">34 - 36"</td></tr>
+            <tr><td class="p-2.5 font-bold text-white">XL</td><td class="p-2.5">47 - 50"</td><td class="p-2.5">31"</td><td class="p-2.5">37 - 40"</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= FLOATING WHATSAPP CHAT & FAQ BUTTON ================= -->
+  <button id="faqFloatingBtn" onclick="toggleFaqDrawer()" class="fixed bottom-6 right-6 z-40 bg-emerald-500 hover:bg-emerald-400 text-black p-4 rounded-full shadow-2xl transition-all transform hover:scale-110 active:scale-95 flex items-center justify-center border-2 border-white/20 pulse-glow" aria-label="WORK BOYZ Chat Assistant">
+    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M12.031 0C5.396 0 0 5.397 0 12.031c0 2.122.553 4.195 1.607 6.02L0 24l6.102-1.6c1.761.96 3.754 1.467 5.929 1.467 6.634 0 12.03-5.397 12.03-12.036C24.061 5.397 18.665 0 12.031 0z"/></svg>
+  </button>
+
+  <!-- ================= DARK-MODE INTERACTIVE CHAT DRAWER ================= -->
+  <div id="faqDrawer" class="hidden fixed inset-0 z-50 modal-backdrop bg-black/80 flex justify-end">
+    <div class="bg-[#0b0b0e] w-full max-w-md h-full flex flex-col justify-between border-l border-white/10 shadow-2xl relative">
+      
+      <!-- Chat Drawer Header -->
+      <div class="p-4 sm:p-5 border-b border-white/10 flex items-center justify-between bg-black/40">
+        <div class="flex items-center gap-3">
+          <div class="relative">
+            <div class="w-9 h-9 bg-white text-black font-syne font-black text-sm italic flex items-center justify-center">WB</div>
+            <span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-500 rounded-full border-2 border-black animate-pulse"></span>
+          </div>
+          <div>
+            <h3 class="font-bebas text-xl text-white tracking-widest italic leading-none">WORK BOYZ ASSISTANT</h3>
+            <span class="text-[9px] text-emerald-400 font-bold uppercase tracking-wider block mt-0.5">● Online & Ready</span>
+          </div>
+        </div>
+        <button onclick="toggleFaqDrawer()" class="text-white/40 hover:text-white p-1 transition-colors" aria-label="Close Chat">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Scrollable Message Feed Area -->
+      <div id="chatMessageFeed" class="p-4 sm:p-5 overflow-y-auto flex-grow space-y-3.5 text-xs">
+        <!-- Default Bot Greeting -->
+        <div class="flex gap-2.5 items-start">
+          <div class="w-7 h-7 bg-white/10 text-emerald-400 font-bold text-[10px] flex-shrink-0 flex items-center justify-center rounded-none border border-white/10">WB</div>
+          <div class="bg-white/10 border border-white/10 p-3 text-white/90 rounded-none max-w-[85%] leading-relaxed">
+            Yo! Welcome to WORK BOYZ 💼🔥 Ask me anything about our fits, sizing, or store location below.
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Question Chips -->
+      <div class="px-4 py-2 border-t border-white/5 bg-black/20 overflow-x-auto">
+        <div class="text-[9px] text-white/40 font-bold uppercase tracking-wider mb-1.5">Quick Questions:</div>
+        <div class="flex gap-1.5 flex-nowrap pb-1">
+          <button onclick="sendQuickChip('📍 Store Location?')" class="text-[10px] bg-white/10 hover:bg-white/20 text-white/90 border border-white/15 px-2.5 py-1 whitespace-nowrap transition-colors">📍 Store Location?</button>
+          <button onclick="sendQuickChip('🛍️ How to Order?')" class="text-[10px] bg-white/10 hover:bg-white/20 text-white/90 border border-white/15 px-2.5 py-1 whitespace-nowrap transition-colors">🛍️ How to Order?</button>
+          <button onclick="sendQuickChip('🚚 Delivery Times?')" class="text-[10px] bg-white/10 hover:bg-white/20 text-white/90 border border-white/15 px-2.5 py-1 whitespace-nowrap transition-colors">🚚 Delivery Times?</button>
+          <button onclick="sendQuickChip('📏 Sizing & Fit?')" class="text-[10px] bg-white/10 hover:bg-white/20 text-white/90 border border-white/15 px-2.5 py-1 whitespace-nowrap transition-colors">📏 Sizing & Fit?</button>
+        </div>
+      </div>
+
+      <!-- Interactive Chat Input -->
+      <form onsubmit="handleChatSubmit(event)" class="p-3 border-t border-white/10 bg-black/60 flex gap-2">
+        <input id="chatInput" type="text" placeholder="Type your question..." class="flex-grow bg-white/5 border border-white/15 px-3 py-2 text-xs text-white placeholder-white/40 focus:outline-none focus:border-emerald-500 transition-colors" />
+        <button type="submit" class="bg-emerald-500 hover:bg-emerald-400 text-black font-black px-4 py-2 text-xs uppercase tracking-wider transition-colors flex items-center justify-center">
+          Send
+        </button>
+      </form>
+
+      <!-- Sticky WhatsApp Direct CTA -->
+      <div class="p-4 border-t border-white/10 bg-black">
+        <a href="https://wa.me/2348136263503" target="_blank" class="w-full btn-whatsapp font-black py-3.5 px-4 flex items-center justify-center gap-2 text-xs tracking-[0.2em] uppercase shadow-lg">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 0C5.396 0 0 5.397 0 12.031c0 2.122.553 4.195 1.607 6.02L0 24l6.102-1.6c1.761.96 3.754 1.467 5.929 1.467 6.634 0 12.03-5.397 12.03-12.036C24.061 5.397 18.665 0 12.031 0z"/></svg>
+          Chat Directly on WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= TOAST NOTIFICATION ================= -->
+  <div id="toast" class="fixed bottom-24 right-6 z-[90] pointer-events-none bg-white text-black font-extrabold px-6 py-3.5 shadow-2xl transition-all transform translate-y-20 opacity-0 flex items-center gap-2 text-xs uppercase tracking-[0.2em]">
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+    </svg>
+    <span id="toastMessage">ITEM ADDED TO BAG!</span>
+  </div>
+
+
+  <!-- ================= JAVASCRIPT LOGIC ================= -->
+  <script>
+    // Store WhatsApp Order Phone Number
+    const WA_PHONE = '2348136263503';
+
+    // HERO CAROUSEL ASSETS (First 7 items explicitly required)
+    const HERO_SLIDES = [
+      {
+        id: 'hero-1',
+        image: 'https://lh3.googleusercontent.com/d/1lcrRlK-prF13_GUW6rm9pZQm6ALkyE-Y',
+        tag: 'ARCHIVE ESSENTIALS',
+        title: 'STEP INTO YOUR WORK BOYZ',
+        subtitle: 'Oversized silhouettes engineered for daily hustle.',
+        productId: 'cap-1'
+      },
+      {
+        id: 'hero-2',
+        image: 'https://lh3.googleusercontent.com/d/1zJlVcWLnY7-_3jJuYIrMfFqqQXhIL2oc',
+        tag: 'DAILY UNIFORM',
+        title: 'THE HUSTLE CULTURE',
+        subtitle: 'Heavyweight cuts built for the relentless.',
+        productId: 'singlet-2'
+      },
+      {
+        id: 'hero-3',
+        image: 'https://lh3.googleusercontent.com/d/1kUN4hn-di_m-XWArisCXQ_Tobh9I9N_Y',
+        tag: 'STREETWEAR STATEMENT',
+        title: 'BUILT FOR THE BOLD',
+        subtitle: 'Premium fits made to stand out anywhere.',
+        productId: 'bottom-1'
+      },
+      {
+        id: 'hero-4',
+        image: 'https://lh3.googleusercontent.com/d/11-4P9FTDW2vVRd85BGWETVoE2O9pkTSU',
+        tag: 'NEW ARRIVALS',
+        title: 'WORK HARD, DRESS HARDER',
+        subtitle: 'Modern industrial streetwear crafted without compromise.',
+        productId: 'tee-1'
+      },
+      {
+        id: 'hero-5',
+        image: 'https://lh3.googleusercontent.com/d/1H-k1mvGzZJgaen3e8-40TzFJN0UUVmCL',
+        tag: 'URBAN LUXURY',
+        title: 'OWN THE STREETS',
+        subtitle: 'Clean lines, heavy fabrics, and raw streetwear attitude.',
+        productId: 'bottom-3'
+      },
+      {
+        id: 'hero-6',
+        image: 'https://lh3.googleusercontent.com/d/1Ftn2c5VeyxCO_GVh3cVk5PrSPUwOU-jA',
+        tag: 'SIGNATURE CUTS',
+        title: 'CRAFTED FOR MOVERS',
+        subtitle: 'Designed for those making moves every single day.',
+        productId: 'cap-2'
+      },
+      {
+        id: 'hero-7',
+        image: 'https://lh3.googleusercontent.com/d/1ZBIufvYJuDgDsGEet8mnW5kLFtyj7_2D',
+        tag: 'WORK BOYZ CULTURE',
+        title: 'WORN WORLDWIDE',
+        subtitle: 'Raw energy meets luxury street aesthetics.',
+        productId: 'singlet-2'
+      }
+    ];
+
+    // ALL PRODUCTS DATA (Exact links mapped to categories)
+    const PRODUCTS = [
+      // CAPS (7 items)
+      {
+        id: 'cap-1',
+        title: 'WORK BOYZ CAP',
+        category: 'CAPS',
+        price: 10000,
+        image: 'https://lh3.googleusercontent.com/d/1m_nPwf5z2taiKP7d005XwUJ_0jBcr6mO',
+        badge: 'HOT DROP',
+        description: 'High-density foam trucker front with silver chrome logo plaque and breathable mesh backing.'
+      },
+      {
+        id: 'cap-2',
+        title: 'WORK BOYZ BUCKET HAT',
+        category: 'CAPS',
+        price: 10000,
+        image: 'https://lh3.googleusercontent.com/d/1F4lWsLNkU0DUpVrOjBE4LzzBBGOhtUl5',
+        badge: 'EXCLUSIVE',
+        description: 'Hand-distressed washed twill canvas with vintage frayed brim details.'
+      },
+      {
+        id: 'cap-3',
+        title: 'WORK BOYZ CAMO CAP',
+        category: 'CAPS',
+        price: 15000,
+        image: 'https://lh3.googleusercontent.com/d/1fKeJHfxz2APHlKZNoOTUxkTxOnNo1cVP',
+        badge: 'LIMITED',
+        description: 'Structured 6-panel fitted cap with 3D high-density embroidery.'
+      },
+      {
+        id: 'cap-4',
+        title: 'WORK BOYZ BEANIE (HEAD WARMER)',
+        category: 'CAPS',
+        price: 10000,
+        image: 'https://lh3.googleusercontent.com/d/1weJ76U2fntuHRgLT5pRrTo_ZprEuzV14',
+        badge: 'POPULAR',
+        description: 'Heavy knit rib beanie with rubberized industrial WORK BOYZ tag.'
+      },
+      {
+        id: 'cap-5',
+        title: 'WORK BOYZ CAP',
+        category: 'CAPS',
+        price: 10000,
+        image: 'https://lh3.googleusercontent.com/d/1rkECYItJr_2QFxb_Z7R4kNILK-2RegAI',
+        badge: 'NEW',
+        description: 'Deep crown snapback featuring laser-engraved metal buckle back closure.'
+      },
+      {
+        id: 'cap-6',
+        title: 'WORK BOYZ BEANIE (HEAD WARMER)',
+        category: 'CAPS',
+        price: 10000,
+        image: 'https://lh3.googleusercontent.com/d/1bVQytQUp8OuToOKojm4JnEFaqgh8KiUP',
+        badge: 'LUXURY',
+        description: 'Micro-suede brim feel with custom silk-lined inner crown.'
+      },
+      {
+        id: 'cap-7',
+        title: 'WORK BOYZ BALACLAVA SKI MASK',
+        category: 'CAPS',
+        price: 10000,
+        image: 'https://lh3.googleusercontent.com/d/1zsIrL_WuDoR6BJSrEPbbDaPKxs720NzF',
+        badge: 'RESTOCK',
+        description: 'Enzyme-washed cotton canvas for a sun-bleached streetwear finish.'
+      },
+      {
+        id: 'cap-8',
+        title: 'Work Boyz Cap',
+        category: 'CAPS',
+        price: 10000,
+        image: 'https://lh3.googleusercontent.com/d/1TAWXZ6I3i62DCCEcOmd2mwFNcKuw1HlG',
+        badge: 'NEW',
+        description: 'Classic Work Boyz embroidered cap with structured crown.'
+      },
+
+      // SINGLETS (5 items)
+      {
+        id: 'singlet-2',
+        title: 'Work Boyz Singlet',
+        category: 'SINGLETS',
+        price: 20000,
+        image: 'https://lh3.googleusercontent.com/d/1LKlLdOFeQkdskZv1FWCppgYnrGHlk6rT',
+        badge: 'HOT DROP',
+        description: 'Heavy 260GSM cotton jersey with raw cut hem and drop shoulder cutouts.'
+      },
+      {
+        id: 'singlet-3',
+        title: 'Work Boyz Singlet',
+        category: 'SINGLETS',
+        price: 20000,
+        image: 'https://lh3.googleusercontent.com/d/18lmj1WKEUsdGQbKVSQCxzV58DZxjcUnK',
+        badge: 'STREET SOUK',
+        description: 'Breathable dual-layer athletic eyelet mesh with printed lower tag.'
+      },
+      {
+        id: 'singlet-4',
+        title: 'Work Boyz Singlet',
+        category: 'SINGLETS',
+        price: 20000,
+        image: 'https://lh3.googleusercontent.com/d/1LZiGK5jyiXaQD6qmW8Ysyjtad0epvvPB',
+        badge: 'LIMITED',
+        description: 'Custom mineral wash finish ensuring every piece has a unique visual texture.'
+      },
+      {
+        id: 'singlet-5',
+        title: 'Work Boyz Singlet',
+        category: 'SINGLETS',
+        price: 20000,
+        image: 'https://lh3.googleusercontent.com/d/1u6oc9Kq8sTpV4nMWXoCp1otXmlCNxLZq',
+        badge: 'NEW',
+        description: 'Hand-distressed collar trim with heavy boxy aesthetic.'
+      },
+      {
+        id: 'singlet-6',
+        title: 'Work Boyz Armless and Short',
+        category: 'SINGLETS',
+        price: 40000,
+        image: 'https://lh3.googleusercontent.com/d/1szVI1FWuKulYr4HllfA8Oz9np3Eor5E8',
+        badge: 'EXCLUSIVE',
+        description: 'Chest utility flap pocket with matte black zipper pulls.'
+      },
+      {
+        id: 'singlet-7',
+        title: 'WORK BOYZ Essential Black Set',
+        category: 'SINGLETS',
+        price: 55500,
+        image: 'https://lh3.googleusercontent.com/d/1FmedNeic58qeCdL6LjHXo6CHcgj5cdeS',
+        badge: 'NEW DROP',
+        description: 'Signature heavyweight Work Boyz essential black set tailored for high-end streetwear comfort.'
+      },
+
+      // ARMLESS TANKS (4 items)
+      {
+        id: 'armless-1',
+        title: 'Work Boyz Armless Tank - Style 1',
+        category: 'ARMLESS',
+        price: 25000,
+        image: 'https://drive.google.com/thumbnail?id=1uT9pt5raZOFC95TqJVrAlAbfFqImNkYs&sz=w1000',
+        badge: 'NEW DROP',
+        description: 'Signature Work Boyz heavyweight armless tank cut with raw edge finish.'
+      },
+      {
+        id: 'armless-2',
+        title: 'Work Boyz Armless Tank - Style 2',
+        category: 'ARMLESS',
+        price: 25000,
+        image: 'https://drive.google.com/thumbnail?id=1sCn3wVYehGW4YMm0iPzbiu-A5oNog8pJ&sz=w1000',
+        badge: 'HOT DROP',
+        description: 'Premium athletic armless tank with high-density chest branding.'
+      },
+      {
+        id: 'armless-3',
+        title: 'Work Boyz Armless Tank - Style 3',
+        category: 'ARMLESS',
+        price: 25000,
+        image: 'https://drive.google.com/thumbnail?id=1BviTBqhbyz9dlQcuqwVG0mwF2zGKXt4g&sz=w1000',
+        badge: 'BESTSELLER',
+        description: 'Heavy combed cotton armless tank tailored for breathable urban comfort.'
+      },
+      {
+        id: 'armless-4',
+        title: 'Work Boyz Armless Tank - Style 4',
+        category: 'ARMLESS',
+        price: 25000,
+        image: 'https://drive.google.com/thumbnail?id=1xRk_hrn1NuDAzdR8nMTeEJboUca-dUMa&sz=w1000',
+        badge: 'LIMITED',
+        description: 'Deep armhole urban tank top featuring vintage wash finish.'
+      },
+
+      // BOTTOMS (Shorts, Trousers & Jeans) (4 items)
+      {
+        id: 'bottom-1',
+        title: 'Work Boyz Shorts',
+        category: 'BOTTOMS',
+        price: 20000,
+        image: 'https://lh3.googleusercontent.com/d/1LoYvemzX-6WlWFB7XGcbjKMBro1TMN2W',
+        badge: 'HOT DROP',
+        description: '450GSM French terry fleece shorts with 3D cargo side flap pockets.'
+      },
+      {
+        id: 'bottom-2',
+        title: 'Work Boyz Shorts',
+        category: 'BOTTOMS',
+        price: 20000,
+        image: 'https://lh3.googleusercontent.com/d/1iXnyEGUh7moQh3Uyn4VfnqfZfaSg88Mq',
+        badge: 'STREET SOUK',
+        description: '14oz rigid Japanese raw denim with exaggerated wide-leg skater drape.'
+      },
+      {
+        id: 'bottom-3',
+        title: 'Work Boyz Jeans Up And Down',
+        category: 'BOTTOMS',
+        price: 60000,
+        image: 'https://lh3.googleusercontent.com/d/1l2j6b5juQ7T924rml_APcHzsoxdjF0eA',
+        badge: 'BESTSELLER',
+        description: 'Heavy ripstop cotton trousers equipped with 8 functional tactical compartments.'
+      },
+      {
+        id: 'bottom-4',
+        title: 'Work Boyz Jeans Only',
+        category: 'BOTTOMS',
+        price: 30000,
+        image: 'https://lh3.googleusercontent.com/d/1dyK8heI0vH_z-VnrVRH_4aAQBdpBb36n',
+        badge: 'LIMITED',
+        description: 'Heavy carpenter hammer loop, knee double-layer paneling, and paint splatter accents.'
+      },
+
+      // TRACKSUITS (2 items)
+      {
+        id: 'bottom-6',
+        title: 'Work Boyz Track Suit Red',
+        category: 'TRACKSUITS',
+        price: 60000,
+        image: 'https://lh3.googleusercontent.com/d/100NAKXkHyf7MuuUii5_he7aq0lx7retG',
+        badge: 'HOT DROP',
+        description: 'Signature Work Boyz red athletic tracksuit set with custom paneling.'
+      },
+      {
+        id: 'bottom-7',
+        title: 'Work Boyz Track Suit White',
+        category: 'TRACKSUITS',
+        price: 60000,
+        image: 'https://lh3.googleusercontent.com/d/1jBUxFuJGV2eBZiXVd1Yf3HXuBSUdHdzG',
+        badge: 'HOT DROP',
+        description: 'Signature Work Boyz white athletic tracksuit set with custom paneling.'
+      },
+
+      // T-SHIRTS (7 items)
+      {
+        id: 'tee-1',
+        title: 'Work Boyz T-shirt',
+        category: 'T-SHIRTS',
+        price: 35000,
+        image: 'https://lh3.googleusercontent.com/d/1oqOni8_6EufJTN6RL-QpgnFlvO04vICg',
+        badge: 'HOT DROP',
+        description: 'Thick 300GSM combed cotton jersey with high-build screenprint artwork.'
+      },
+      {
+        id: 'tee-2',
+        title: 'Work Boyz T-shirt',
+        category: 'T-SHIRTS',
+        price: 35000,
+        image: 'https://lh3.googleusercontent.com/d/1I9N4bA8_7sIwMBvzWnQ_-e2TTN10vsoo',
+        badge: 'BESTSELLER',
+        description: 'Relaxed drop-shoulder silhouette featuring back typography print.'
+      },
+      {
+        id: 'tee-3',
+        title: 'Work Boyz T-shirt',
+        category: 'T-SHIRTS',
+        price: 35000,
+        image: 'https://lh3.googleusercontent.com/d/189oCt4lTFfQVvROZQg2JhdQ9C1psfc6J',
+        badge: 'EXCLUSIVE',
+        description: 'Heavy stone-wash treatment for a authentic retro streetwear drape.'
+      },
+      {
+        id: 'tee-4',
+        title: 'Work Boyz T-shirt',
+        category: 'T-SHIRTS',
+        price: 35000,
+        image: 'https://lh3.googleusercontent.com/d/1gMZmLfGzkkiTrS7_ZuOt2KVtpAkNGVpd',
+        badge: 'STREET SOUK',
+        description: 'Limited edition Lagos pop-up tee with 3D tactile puff print graphics.'
+      },
+      {
+        id: 'tee-5',
+        title: 'WORK BOYZ T-shirt',
+        category: 'T-SHIRTS',
+        price: 35000,
+        image: 'https://lh3.googleusercontent.com/d/1L5VgCJvrwUWu5b9lBTFwIKP46R58BbUU',
+        badge: 'NEW',
+        description: 'Minimalist front chest micro-print with full back manifesto layout.'
+      },
+      {
+        id: 'tee-6',
+        title: 'WORK BOYZ T-shirt',
+        category: 'T-SHIRTS',
+        price: 35000,
+        image: 'https://lh3.googleusercontent.com/d/1p9IFQaHlHnUV4Rov6mP9yg4OklfZhhdw',
+        badge: 'LIMITED',
+        description: 'Silver metallic foil heat-transfer graphic that reflects light under flash photography.'
+      },
+      {
+        id: 'tee-7',
+        title: 'WORK BOYZ Otukpo T-shirt',
+        category: 'T-SHIRTS',
+        price: 30000,
+        image: 'https://lh3.googleusercontent.com/d/1qjVGzyBRkSALn1pz9EBNYOUlVZQcfOf1',
+        badge: 'RESTOCK',
+        description: 'Boxy industrial fit cut with twin needle cover stitching.'
+      }
+    ];
+
+    // EDITORIAL LOOKBOOK DATA
+    const LOOKBOOK_ITEMS = [
+      {
+        title: 'ARCHIVE STREETS DROP 04',
+        location: 'ARCHIVE DROP 01',
+        image: 'https://lh3.googleusercontent.com/d/1uKXEpQzEXDKg1jogV8LAGavyk5BdpjDN',
+        tag: 'FIT 01'
+      },
+      {
+        title: 'RAW HEAVYWEIGHT ATHLETICS',
+        location: 'RAW HEAVYWEIGHT CUTS',
+        image: 'https://lh3.googleusercontent.com/d/1CdYMOqnNfHGU719uc9jDvg8L3GM1FuXK',
+        tag: 'FIT 02'
+      },
+      {
+        title: 'FLEECE & TACTICAL CARGO',
+        location: 'FLEECE & TACTICAL FIT',
+        image: 'https://lh3.googleusercontent.com/d/1kUN4hn-di_m-XWArisCXQ_Tobh9I9N_Y',
+        tag: 'FIT 03'
+      },
+      {
+        title: 'GRAPHIC TEE SHADOW DYNAMICS',
+        location: 'SHADOW DYNAMICS',
+        image: 'https://lh3.googleusercontent.com/d/1H9YAMBo12AIOyRv8srQW4Qxypb3WqX2s',
+        tag: 'FIT 04'
+      },
+      {
+        title: 'TACTICAL TROUSERS IN MOTION',
+        location: 'URBAN MONOGRAM',
+        image: 'https://lh3.googleusercontent.com/d/1lcrRlK-prF13_GUW6rm9pZQm6ALkyE-Y',
+        tag: 'FIT 05'
+      },
+      {
+        title: 'DISTRESSED ARCHIVE CAP',
+        location: 'HERITAGE DRIP',
+        image: 'https://lh3.googleusercontent.com/d/13wURg2asWBKwbyfZQLrFDebJc8CfmylA',
+        tag: 'FIT 06'
+      },
+      {
+        title: 'WORK BOYZ INDUSTRIAL CUTS',
+        location: 'ARCHIVE DROP 02',
+        image: 'https://lh3.googleusercontent.com/d/1Ftn2c5VeyxCO_GVh3cVk5PrSPUwOU-jA',
+        tag: 'FIT 07'
+      },
+      {
+        title: 'URBAN MONOGRAM SERIES',
+        location: 'INDUSTRIAL SILHOUETTE',
+        image: 'https://lh3.googleusercontent.com/d/1H-k1mvGzZJgaen3e8-40TzFJN0UUVmCL',
+        tag: 'FIT 08'
+      },
+      {
+        title: 'MINIMALIST COMPRESSION FIT',
+        location: 'TACTICAL UTILITY CUTS',
+        image: 'https://lh3.googleusercontent.com/d/1zJlVcWLnY7-_3jJuYIrMfFqqQXhIL2oc',
+        tag: 'FIT 09'
+      },
+      {
+        title: 'RAW SKATER DENIM & TEES',
+        location: 'SKATER DENIM & TEES',
+        image: 'https://lh3.googleusercontent.com/d/1KQt2qTF6hLnL6LiFVPOFpOoMZZI_Aj7H',
+        tag: 'FIT 10'
+      },
+      {
+        title: 'ACID WASHED HERITAGE FIT',
+        location: 'ACID WASHED HERITAGE',
+        image: 'https://lh3.googleusercontent.com/d/1ZBIufvYJuDgDsGEet8mnW5kLFtyj7_2D',
+        tag: 'FIT 11'
+      },
+      {
+        title: 'PULLOVER HEAVY GRAPHIC DRAFT',
+        location: 'PULLOVER GRAPHIC DRAFT',
+        image: 'https://lh3.googleusercontent.com/d/11-4P9FTDW2vVRd85BGWETVoE2O9pkTSU',
+        tag: 'FIT 12'
+      }
+    ];
+
+    // STATE VARIABLES
+    let currentSlide = 0;
+    let activeCategory = 'ALL';
+    let searchQuery = '';
+    let selectedQuickProduct = null;
+    let selectedSize = 'M';
+    let selectedQty = 1;
+    let cart = [];
+    let wishlist = [];
+
+    // Preloader Dismiss
+    window.addEventListener('load', () => {
+      hidePreloader();
+    });
+    setTimeout(hidePreloader, 1200);
+
+    function hidePreloader() {
+      const p = document.getElementById('preloader');
+      if (p && p.style.display !== 'none') {
+        p.style.opacity = '0';
+        setTimeout(() => { p.style.display = 'none'; }, 400);
+      }
+    }
+
+    // INITIALIZATION
+    document.addEventListener('DOMContentLoaded', () => {
+      initHeroSlider();
+      renderProducts();
+      renderLookbook();
+      initSearchListeners();
+      renderCartItems();
+    });
+
+    // ================= HERO CAROUSEL LOGIC =================
+    function initHeroSlider() {
+      const sliderEl = document.getElementById('heroSlider');
+      const dotsEl = document.getElementById('heroDots');
+
+      sliderEl.innerHTML = '';
+      dotsEl.innerHTML = '';
+
+      HERO_SLIDES.forEach((slide, idx) => {
+        // Slide item
+        const slideDiv = document.createElement('div');
+        slideDiv.className = `hero-slide ${idx === 0 ? 'active' : ''}`;
+        slideDiv.innerHTML = `
+          <img src="${slide.image}" alt="${slide.title}" loading="lazy" class="w-full h-full object-cover opacity-85" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-black/40 to-black/20"></div>
+          <div class="absolute bottom-14 sm:bottom-20 left-6 sm:left-14 right-6 max-w-3xl z-10">
+            <span class="text-[10px] uppercase tracking-[0.4em] mb-3 text-white/70 font-medium block">
+              ${slide.tag}
+            </span>
+            <h1 class="font-black text-4xl sm:text-6xl lg:text-7xl text-white italic tracking-tighter leading-[0.9] drop-shadow-lg">
+              ${slide.title}
+            </h1>
+            <p class="text-white/60 text-xs sm:text-sm font-space max-w-xl my-4 hidden sm:block leading-relaxed">
+              ${slide.subtitle}
+            </p>
+            <div class="mt-6 flex flex-wrap items-center gap-4">
+              <button onclick="openQuickViewModalById('${slide.productId}')" class="btn-brutal bg-white hover:bg-slate-200 text-black font-extrabold px-8 py-3.5 text-xs tracking-[0.2em] flex items-center gap-2 shadow-xl">
+                <span>EXPLORE COLLECTION</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </button>
+            </div>
+          </div>
+        `;
+        sliderEl.appendChild(slideDiv);
+
+        // Dot bar indicator
+        const dotBtn = document.createElement('button');
+        dotBtn.className = `h-[2px] transition-all ${idx === 0 ? 'w-12 bg-white' : 'w-12 bg-white/20 hover:bg-white/50'}`;
+        dotBtn.ariaLabel = `Go to slide ${idx + 1}`;
+        dotBtn.onclick = () => goToSlide(idx);
+        dotsEl.appendChild(dotBtn);
+      });
+
+      // Controls
+      document.getElementById('heroPrevBtn').onclick = () => { prevSlide(); startSlideTimer(); };
+      document.getElementById('heroNextBtn').onclick = () => { nextSlide(); startSlideTimer(); };
+
+      startSlideTimer();
+    }
+
+    let heroTimer = null;
+    function startSlideTimer() {
+      if (heroTimer) clearInterval(heroTimer);
+      heroTimer = setInterval(() => {
+        nextSlide();
+      }, 3000);
+    }
+
+    function goToSlide(idx) {
+      const slides = document.querySelectorAll('.hero-slide');
+      const dots = document.querySelectorAll('#heroDots button');
+      if (!slides.length) return;
+
+      slides[currentSlide].classList.remove('active');
+      dots[currentSlide].className = 'w-12 h-[2px] bg-white/20 hover:bg-white/50 transition-all';
+
+      currentSlide = (idx + slides.length) % slides.length;
+
+      slides[currentSlide].classList.add('active');
+      dots[currentSlide].className = 'w-12 h-[2px] bg-white transition-all';
+    }
+
+    function nextSlide() {
+      goToSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      goToSlide(currentSlide - 1);
+    }
+
+
+    // ================= PRODUCT CATALOG LOGIC =================
+    function filterCategory(cat) {
+      activeCategory = cat;
+
+      // Update Nav links
+      document.querySelectorAll('.nav-cat-link').forEach(link => {
+        if (link.dataset.cat === cat) {
+          link.className = 'nav-cat-link active text-white hover:text-white/60 transition-colors py-1 border-b border-white';
+        } else {
+          link.className = 'nav-cat-link text-white/60 hover:text-white transition-colors py-1 border-b border-transparent';
+        }
+      });
+
+      // Update Pills
+      document.querySelectorAll('.cat-pill').forEach(pill => {
+        if (pill.dataset.pill === cat) {
+          pill.className = 'cat-pill active bg-white text-black font-bold text-[11px] uppercase px-5 py-2.5 tracking-[0.15em] transition-all';
+        } else {
+          pill.className = 'cat-pill bg-white/5 hover:bg-white/10 text-white/70 font-bold text-[11px] uppercase px-5 py-2.5 tracking-[0.15em] border border-white/10 transition-all';
+        }
+      });
+
+      renderProducts();
+    }
+
+    function renderProducts() {
+      const grid = document.getElementById('productGrid');
+      const sortVal = document.getElementById('sortSelect').value;
+
+      // Filter
+      let filtered = PRODUCTS.filter(p => {
+        const matchesCat = activeCategory === 'ALL' || p.category === activeCategory;
+        const matchesQuery = searchQuery === '' || 
+          p.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+          p.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          p.description.toLowerCase().includes(searchQuery.toLowerCase());
+        return matchesCat && matchesQuery;
+      });
+
+      // Sort
+      if (sortVal === 'price-low') {
+        filtered.sort((a, b) => a.price - b.price);
+      } else if (sortVal === 'price-high') {
+        filtered.sort((a, b) => b.price - a.price);
+      } else if (sortVal === 'name') {
+        filtered.sort((a, b) => a.title.localeCompare(b.title));
+      }
+
+      // Update count text
+      document.getElementById('catalogCount').innerText = `SHOWING ${filtered.length} OF ${PRODUCTS.length} ITEMS`;
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-16 text-center text-white/50">
+            <p class="font-bebas text-3xl text-white italic">NO PIECES MATCH YOUR SEARCH</p>
+            <p class="text-xs mt-2">Try clearing search filters or selecting another category.</p>
+            <button onclick="searchQuery=''; document.getElementById('searchInput').value=''; filterCategory('ALL');" class="mt-4 bg-white text-black font-bold text-xs uppercase px-5 py-2.5 tracking-wider">
+              RESET FILTERS
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(p => {
+        const isWishlisted = wishlist.includes(p.id);
+        const waDirectUrl = generateSingleWhatsAppUrl(p.title, p.category, 'M', p.price, 1);
+
+        return `
+          <div class="group bg-white/5 border border-white/10 overflow-hidden flex flex-col justify-between transition-all hover:border-white/30">
+            <!-- Image Wrapper -->
+            <div class="relative card-img-wrap aspect-[4/5] bg-black overflow-hidden cursor-pointer" onclick="openQuickViewModalById('${p.id}')">
+              <img src="${p.image}" alt="${p.title}" loading="lazy" class="w-full h-full object-cover object-top" />
+              
+              <!-- Badge -->
+              <span class="absolute top-3 left-3 bg-black/80 backdrop-blur-sm border border-white/20 text-white font-bold text-[9px] uppercase tracking-[0.2em] px-2.5 py-1">
+                ${p.badge}
+              </span>
+
+              <!-- Wishlist Heart Button -->
+              <button onclick="event.stopPropagation(); toggleWishlist('${p.id}')" class="absolute top-3 right-3 p-2 rounded-full bg-black/60 hover:bg-black text-white transition-colors z-10" aria-label="Add to Wishlist">
+                <svg class="w-4 h-4 ${isWishlisted ? 'fill-red-600 text-red-600' : 'fill-none stroke-current'}" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                </svg>
+              </button>
+
+              <!-- Quick View Overlay -->
+              <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
+                <span class="bg-white text-black font-bold text-[10px] uppercase tracking-[0.2em] px-5 py-2.5 transform translate-y-2 group-hover:translate-y-0 transition-transform">
+                  QUICK VIEW
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Info -->
+            <div class="p-4 sm:p-5 flex flex-col flex-grow justify-between">
+              <div>
+                <div class="text-[9px] font-bold text-white/40 uppercase tracking-[0.25em]">${p.category}</div>
+                <h3 class="font-bebas text-xl text-white tracking-wide mt-1 italic line-clamp-1 group-hover:text-white/80 transition-colors" onclick="openQuickViewModalById('${p.id}')">
+                  ${p.title}
+                </h3>
+                <div class="font-syne font-black text-lg text-white mt-1">
+                  ₦ ${p.price.toLocaleString()}
+                </div>
+              </div>
+
+              <!-- Order & Add To Bag Buttons -->
+              <div class="mt-4 grid grid-cols-2 gap-2">
+                <a href="${waDirectUrl}" target="_blank" onclick="event.stopPropagation()" class="btn-whatsapp font-bold py-2.5 px-2 text-[10px] text-center uppercase tracking-[0.15em] flex items-center justify-center gap-1 shadow-sm hover:brightness-110 transition-all">
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12.031 0C5.396 0 0 5.397 0 12.031c0 2.122.553 4.195 1.607 6.02L0 24l6.102-1.6c1.761.96 3.754 1.467 5.929 1.467 6.634 0 12.03-5.397 12.03-12.036C24.061 5.397 18.665 0 12.031 0z"/></svg>
+                  ORDER
+                </a>
+                <button onclick="addToCartDirect('${p.id}')" class="bg-white/10 hover:bg-white text-white hover:text-black border border-white/20 font-bold py-2.5 px-2 text-[10px] uppercase tracking-[0.15em] transition-all flex items-center justify-center gap-1">
+                  <svg class="w-3.5 h-3.5 stroke-current fill-none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+                  + BAG
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // ================= LOOKBOOK GALLERY LOGIC =================
+    function renderLookbook() {
+      const lbGrid = document.getElementById('lookbookGrid');
+      lbGrid.innerHTML = LOOKBOOK_ITEMS.map(lb => `
+        <div class="relative group aspect-[3/4] bg-black overflow-hidden border border-white/10 hover:border-white/20 transition-all">
+          <img src="${lb.image}" alt="WORK BOYZ Fit" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none"></div>
+          
+          <div class="absolute bottom-5 left-0 right-0 px-4 flex justify-center items-center pointer-events-none">
+            <img src="https://lh3.googleusercontent.com/d/1r7DHKW-7KXb9FvLhQ03pGSlWBzlrFX7w" alt="WORK BOYZ Logo" class="drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]" style="height: 80px; max-width: 85%; width: auto; object-fit: contain;" />
+          </div>
+        </div>
+      `).join('');
+    }
+
+
+    // ================= QUICK-VIEW MODAL LOGIC =================
+    function openQuickViewModalById(id) {
+      const product = PRODUCTS.find(p => p.id === id);
+      if (!product) return;
+
+      selectedQuickProduct = product;
+      selectedSize = 'M';
+      selectedQty = 1;
+
+      document.getElementById('qvImage').src = product.image;
+      document.getElementById('qvTitle').innerText = product.title;
+      document.getElementById('qvCategory').innerText = product.category;
+      document.getElementById('qvBadge').innerText = product.badge;
+      document.getElementById('qvPrice').innerText = `₦ ${product.price.toLocaleString()}`;
+      document.getElementById('qvDescription').innerText = product.description;
+      document.getElementById('qvQty').innerText = selectedQty;
+
+      // Highlight size M default
+      selectSize('M');
+
+      document.getElementById('quickViewModal').classList.remove('hidden');
+    }
+
+    function closeQuickViewModal() {
+      document.getElementById('quickViewModal').classList.add('hidden');
+    }
+
+    function selectSize(size) {
+      selectedSize = size;
+      document.querySelectorAll('.qv-size-btn').forEach(btn => {
+        if (btn.dataset.size === size) {
+          btn.className = 'qv-size-btn active border-2 border-white bg-white/10 text-white py-2.5 text-xs font-bold transition-all';
+        } else {
+          btn.className = 'qv-size-btn border border-white/10 bg-white/5 hover:border-white text-white/70 py-2.5 text-xs font-bold transition-all';
+        }
+      });
+
+      updateQvWhatsAppUrl();
+    }
+
+    function adjustQvQty(delta) {
+      selectedQty = Math.max(1, selectedQty + delta);
+      document.getElementById('qvQty').innerText = selectedQty;
+      updateQvWhatsAppUrl();
+    }
+
+    function updateQvWhatsAppUrl() {
+      if (!selectedQuickProduct) return;
+      const url = generateSingleWhatsAppUrl(
+        selectedQuickProduct.title,
+        selectedQuickProduct.category,
+        selectedSize,
+        selectedQuickProduct.price,
+        selectedQty
+      );
+      document.getElementById('qvWhatsAppLink').href = url;
+    }
+
+    function generateSingleWhatsAppUrl(title, category, size, price, qty) {
+      const total = price * qty;
+      const text = `Hello WORK BOYZ! ⚡ I want to place an instant order:\n\n` +
+        `• *Item:* ${title}\n` +
+        `• *Category:* ${category}\n` +
+        `• *Size:* ${size}\n` +
+        `• *Quantity:* ${qty}\n` +
+        `• *Price:* ₦${price.toLocaleString()}\n` +
+        `• *Total:* ₦${total.toLocaleString()}\n\n` +
+        `Please confirm availability and send payment/delivery details for Lagos/Nationwide.`;
+
+      return `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(text)}`;
+    }
+
+
+    // ================= SHOPPING BAG / CART DRAWER LOGIC =================
+    function toggleCartDrawer() {
+      const drawer = document.getElementById('cartDrawer');
+      drawer.classList.toggle('hidden');
+      renderCartItems();
+    }
+
+    function addToCartDirect(id) {
+      const product = PRODUCTS.find(p => p.id === id);
+      if (!product) return;
+
+      const existingIndex = cart.findIndex(item => item.id === id && item.size === 'M');
+      if (existingIndex > -1) {
+        cart[existingIndex].qty += 1;
+      } else {
+        cart.push({ ...product, size: 'M', qty: 1 });
+      }
+
+      updateCartBadge();
+      renderCartItems();
+      showToast(`ADDED ${product.title.split('-')[0]} TO BAG!`);
+    }
+
+    function addCurrentToCart() {
+      if (!selectedQuickProduct) return;
+
+      const existingIndex = cart.findIndex(item => item.id === selectedQuickProduct.id && item.size === selectedSize);
+      if (existingIndex > -1) {
+        cart[existingIndex].qty += selectedQty;
+      } else {
+        cart.push({ ...selectedQuickProduct, size: selectedSize, qty: selectedQty });
+      }
+
+      updateCartBadge();
+      renderCartItems();
+      closeQuickViewModal();
+      showToast(`ADDED TO BAG!`);
+      toggleCartDrawer();
+    }
+
+    function updateCartBadge() {
+      const totalCount = cart.reduce((sum, item) => sum + (Number(item.qty) || 0), 0);
+      document.getElementById('cartCountBadge').innerText = totalCount;
+    }
+
+    function generateCartWhatsAppUrl() {
+      if (!cart || cart.length === 0) {
+        return `https://wa.me/${WA_PHONE}?text=${encodeURIComponent('Hello WORK BOYZ! I would like to place an order.')}`;
+      }
+
+      let subtotal = 0;
+      let cartMsg = `Hello WORK BOYZ, I'd like to place an order from my bag:\n\n`;
+      cart.forEach((item, index) => {
+        const itemQty = Number(item.qty) || 1;
+        const itemPrice = Number(item.price) || 0;
+        const itemTotal = itemPrice * itemQty;
+        subtotal += itemTotal;
+        cartMsg += `${index + 1}. *${item.title}*\n   • Category: ${item.category}\n   • Size: ${item.size}\n   • Qty: ${itemQty}\n   • Price: ₦${itemPrice.toLocaleString()}\n   • Item Subtotal: ₦${itemTotal.toLocaleString()}\n\n`;
+      });
+      cartMsg += `📦 *GRAND TOTAL: ₦${subtotal.toLocaleString()}*\n\nPlease confirm availability and provide payment details & delivery instructions.`;
+
+      return `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(cartMsg)}`;
+    }
+
+    function renderCartItems() {
+      const container = document.getElementById('cartItemsContainer');
+      const subtotalEl = document.getElementById('cartSubtotal');
+      const totalEl = document.getElementById('cartTotal');
+      const checkoutBtn = document.getElementById('cartCheckoutBtn');
+
+      if (!cart || cart.length === 0) {
+        container.innerHTML = `
+          <div class="py-16 text-center text-white/40">
+            <svg class="w-12 h-12 mx-auto text-white/20 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+            </svg>
+            <p class="font-bebas text-2xl text-white italic tracking-wider">YOUR BAG IS EMPTY</p>
+            <p class="text-xs mt-1">Explore our drops and add your favorite pieces.</p>
+          </div>
+        `;
+        subtotalEl.innerText = `₦ 0`;
+        totalEl.innerText = `₦ 0`;
+        if (checkoutBtn) {
+          checkoutBtn.href = `https://wa.me/${WA_PHONE}?text=${encodeURIComponent('Hello WORK BOYZ! I want to order.')}`;
+          checkoutBtn.classList.add('opacity-50', 'pointer-events-none');
+          checkoutBtn.classList.remove('pointer-events-auto', 'cursor-pointer');
+        }
+        return;
+      }
+
+      let subtotal = 0;
+      container.innerHTML = cart.map((item, idx) => {
+        const itemQty = Number(item.qty) || 1;
+        const itemPrice = Number(item.price) || 0;
+        const itemTotal = itemPrice * itemQty;
+        subtotal += itemTotal;
+
+        return `
+          <div class="flex items-center gap-4 bg-white/5 p-3.5 border border-white/10">
+            <img src="${item.image}" alt="${item.title}" loading="lazy" class="w-16 h-20 object-cover bg-black flex-shrink-0" />
+            <div class="flex-grow min-w-0">
+              <h4 class="font-bebas text-lg text-white italic leading-tight truncate">${item.title}</h4>
+              <div class="text-[10px] text-white/60 font-bold uppercase tracking-wider mt-0.5">SIZE: ${item.size} • ₦ ${itemPrice.toLocaleString()}</div>
+              
+              <!-- Quantity adjustment -->
+              <div class="flex items-center gap-3 mt-2.5">
+                <div class="flex items-center border border-white/20 bg-black">
+                  <button onclick="changeCartQty(${idx}, -1)" class="px-2.5 py-1 text-xs font-bold text-white/60 hover:text-white" aria-label="Decrease quantity">-</button>
+                  <span class="px-2 text-xs font-bold text-white">${itemQty}</span>
+                  <button onclick="changeCartQty(${idx}, 1)" class="px-2.5 py-1 text-xs font-bold text-white/60 hover:text-white" aria-label="Increase quantity">+</button>
+                </div>
+                <button onclick="removeFromCart(${idx})" class="text-[10px] text-red-400 hover:underline tracking-wider">REMOVE</button>
+              </div>
+            </div>
+            <div class="font-syne font-black text-sm text-white flex-shrink-0">
+              ₦ ${itemTotal.toLocaleString()}
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      subtotalEl.innerText = `₦ ${subtotal.toLocaleString()}`;
+      totalEl.innerText = `₦ ${subtotal.toLocaleString()}`;
+
+      if (checkoutBtn) {
+        checkoutBtn.classList.remove('opacity-50', 'pointer-events-none');
+        checkoutBtn.classList.add('pointer-events-auto', 'cursor-pointer');
+        checkoutBtn.href = generateCartWhatsAppUrl();
+      }
+    }
+
+    function handleCartCheckout(e) {
+      console.log('Cart state on WhatsApp Checkout click:', JSON.parse(JSON.stringify(cart)));
+      if (!cart || cart.length === 0) {
+        if (e) e.preventDefault();
+        showToast('YOUR BAG IS EMPTY!');
+        return false;
+      }
+      
+      const targetUrl = generateCartWhatsAppUrl();
+      console.log('Generated WhatsApp Checkout URL:', targetUrl);
+      
+      const checkoutBtn = document.getElementById('cartCheckoutBtn');
+      if (checkoutBtn) {
+        checkoutBtn.href = targetUrl;
+      }
+      return true;
+    }
+
+    function changeCartQty(idx, delta) {
+      if (cart[idx]) {
+        cart[idx].qty = (Number(cart[idx].qty) || 1) + delta;
+        if (cart[idx].qty <= 0) {
+          cart.splice(idx, 1);
+        }
+      }
+      updateCartBadge();
+      renderCartItems();
+    }
+
+    function removeFromCart(idx) {
+      cart.splice(idx, 1);
+      updateCartBadge();
+      renderCartItems();
+    }
+
+
+    // ================= WISHLIST LOGIC =================
+    function toggleWishlist(id) {
+      const idx = wishlist.indexOf(id);
+      if (idx > -1) {
+        wishlist.splice(idx, 1);
+        showToast('REMOVED FROM WISHLIST');
+      } else {
+        wishlist.push(id);
+        showToast('SAVED TO WISHLIST');
+      }
+
+      // Update badge
+      const badge = document.getElementById('wishlistBadge');
+      if (wishlist.length > 0) {
+        badge.innerText = wishlist.length;
+        badge.classList.remove('hidden');
+      } else {
+        badge.classList.add('hidden');
+      }
+
+      renderProducts();
+    }
+
+    function toggleWishlistModal() {
+      if (wishlist.length === 0) {
+        showToast('YOUR WISHLIST IS EMPTY!');
+        return;
+      }
+      activeCategory = 'ALL';
+      // filter catalog to wishlist
+      const grid = document.getElementById('productGrid');
+      const wishlistedProducts = PRODUCTS.filter(p => wishlist.includes(p.id));
+
+      grid.innerHTML = wishlistedProducts.map(p => {
+        const waDirectUrl = generateSingleWhatsAppUrl(p.title, p.category, 'M', p.price, 1);
+        return `
+          <div class="group bg-white/5 border border-white/10 overflow-hidden flex flex-col justify-between transition-all hover:border-white/30">
+            <div class="relative aspect-[4/5] bg-black overflow-hidden cursor-pointer" onclick="openQuickViewModalById('${p.id}')">
+              <img src="${p.image}" alt="${p.title}" loading="lazy" class="w-full h-full object-cover" />
+              <button onclick="event.stopPropagation(); toggleWishlist('${p.id}')" class="absolute top-3 right-3 p-2 rounded-full bg-black/60 text-red-500">
+                ❤️
+              </button>
+            </div>
+            <div class="p-4">
+              <h3 class="font-bebas text-xl text-white italic">${p.title}</h3>
+              <div class="font-syne font-black text-lg text-white">₦ ${p.price.toLocaleString()}</div>
+              <a href="${waDirectUrl}" target="_blank" class="mt-3 w-full btn-whatsapp font-bold py-2.5 text-[10px] text-center block uppercase tracking-[0.15em]">
+                ORDER ON WHATSAPP
+              </a>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      document.getElementById('catalogSection').scrollIntoView({ behavior: 'smooth' });
+    }
+
+
+    // ================= SEARCH OVERLAY LISTENERS =================
+    function initSearchListeners() {
+      const overlay = document.getElementById('searchOverlay');
+      const input = document.getElementById('searchInput');
+
+      document.getElementById('searchOpenBtn').onclick = () => {
+        overlay.classList.remove('hidden');
+        input.focus();
+      };
+
+      document.getElementById('searchCloseBtn').onclick = () => {
+        overlay.classList.add('hidden');
+      };
+
+      input.oninput = (e) => {
+        searchQuery = e.target.value;
+        renderProducts();
+      };
+    }
+
+    function quickSearch(term) {
+      searchQuery = term;
+      document.getElementById('searchInput').value = term;
+      renderProducts();
+      document.getElementById('searchOverlay').classList.add('hidden');
+      document.getElementById('catalogSection').scrollIntoView({ behavior: 'smooth' });
+    }
+
+
+    // ================= FAQ / CHAT DRAWER LOGIC =================
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str).replace(/[&<>"']/g, function(m) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[m];
+      });
+    }
+
+    function toggleFaqDrawer() {
+      document.getElementById('faqDrawer').classList.toggle('hidden');
+    }
+
+    function addChatMessage(sender, text) {
+      const feed = document.getElementById('chatMessageFeed');
+      if (!feed) return;
+
+      const msgDiv = document.createElement('div');
+      msgDiv.className = 'flex gap-2.5 items-start ' + (sender === 'user' ? 'justify-end' : '');
+
+      if (sender === 'user') {
+        msgDiv.innerHTML = `
+          <div class="bg-emerald-500 text-black font-medium p-3 rounded-none max-w-[85%] leading-relaxed">
+            ${escapeHtml(text)}
+          </div>
+        `;
+      } else {
+        msgDiv.innerHTML = `
+          <div class="w-7 h-7 bg-white/10 text-emerald-400 font-bold text-[10px] flex-shrink-0 flex items-center justify-center rounded-none border border-white/10">WB</div>
+          <div class="bg-white/10 border border-white/10 p-3 text-white/90 rounded-none max-w-[85%] leading-relaxed">
+            ${text}
+          </div>
+        `;
+      }
+
+      feed.appendChild(msgDiv);
+      feed.scrollTop = feed.scrollHeight;
+    }
+
+    function saveChatLead(userText, botResponse) {
+      try {
+        const savedLeads = JSON.parse(localStorage.getItem('wb_chat_leads') || '[]');
+        savedLeads.push({
+          timestamp: new Date().toISOString(),
+          query: userText,
+          response: botResponse
+        });
+        localStorage.setItem('wb_chat_leads', JSON.stringify(savedLeads));
+      } catch (err) {
+        console.log('Lead save note:', err);
+      }
+    }
+
+    function getBotReply(query) {
+      const q = query.toLowerCase();
+      if (q.includes('location') || q.includes('store') || q.includes('address') || q.includes('where')) {
+        return '📍 <strong>Flagship Store:</strong> Shop C348, Worldgate Shopping Center, Along Abuja-Keffi Expressway, Mararaba. Pop in or tap below to chat on WhatsApp!';
+      } else if (q.includes('order') || q.includes('buy') || q.includes('how to')) {
+        return '🛍️ <strong>How to Order:</strong> Simply choose your product, select your size, and tap <strong>"Order on WhatsApp"</strong> to send your order directly to our sales team.';
+      } else if (q.includes('delivery') || q.includes('ship') || q.includes('time')) {
+        return '🚚 <strong>Delivery Timelines:</strong> Same-day dispatch for local Abuja/Nasarawa orders; 2-3 business days nationwide across Nigeria.';
+      } else if (q.includes('size') || q.includes('fit') || q.includes('measurement')) {
+        return '📏 <strong>Sizing Info:</strong> Our tees, shorts, and hoodies feature heavy 300GSM+ boxy streetwear cuts. Check our Size Guide on any product modal or tap Size Guide in the footer!';
+      } else {
+        return 'Thanks for reaching out! For instant order processing or custom stock inquiries, feel free to tap <strong>"Chat Directly on WhatsApp"</strong> below (+234 813 626 3503).';
+      }
+    }
+
+    function handleChatSubmit(e) {
+      e.preventDefault();
+      const input = document.getElementById('chatInput');
+      const text = input.value.trim();
+      if (!text) return;
+
+      // Render User Message
+      addChatMessage('user', text);
+      input.value = '';
+
+      // Generate & Render Bot Reply
+      setTimeout(() => {
+        const reply = getBotReply(text);
+        addChatMessage('bot', reply);
+        saveChatLead(text, reply);
+      }, 500);
+    }
+
+    function sendQuickChip(questionText) {
+      addChatMessage('user', questionText);
+      setTimeout(() => {
+        const reply = getBotReply(questionText);
+        addChatMessage('bot', reply);
+        saveChatLead(questionText, reply);
+      }, 400);
+    }
+
+
+    // ================= SIZE GUIDE MODAL =================
+    function openSizeGuideModal() {
+      document.getElementById('sizeGuideModal').classList.remove('hidden');
+    }
+    function closeSizeGuideModal() {
+      document.getElementById('sizeGuideModal').classList.add('hidden');
+    }
+
+
+    // ================= MOBILE MENU =================
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    }
+    document.getElementById('mobileMenuBtn').onclick = toggleMobileMenu;
+
+
+
+    // ================= TOAST UTILITY =================
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      if (!toast) return;
+      document.getElementById('toastMessage').innerText = msg;
+      toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
